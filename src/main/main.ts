@@ -13,7 +13,7 @@ let tray: Tray;
 
 app.allowRendererProcessReuse = false;
 
-// Instantiate the server
+// Instantiate the server.
 Server(win);
 
 // Only 1 instance is allowed
