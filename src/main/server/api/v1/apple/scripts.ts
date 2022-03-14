@@ -22,7 +22,7 @@ const buildServiceScript = (inputService: string) => {
     return serviceScript;
 };
 
-const buildMessageScript = (message: string, target = "targetBuddy") => {
+export const buildMessageScript = (message: string, target = "targetBuddy") => {
     let messageScpt = "";
     if (isNotEmpty(message)) {
         messageScpt = `send "${escapeOsaExp(message)}" to ${target}`;
@@ -42,7 +42,7 @@ const buildAttachmentScript = (attachment: string, variable = "theAttachment", t
     return attachmentScpt;
 };
 
-const getAddressFromInput = (value: string) => {
+export const getAddressFromInput = (value: string) => {
     // This should always produce an array of minimum length, 1
     const valSplit = value.split(";");
 
@@ -53,7 +53,7 @@ const getAddressFromInput = (value: string) => {
     return valSplit[valSplit.length - 1];
 };
 
-const getServiceFromInput = (value: string) => {
+export const getServiceFromInput = (value: string) => {
     // This should always produce an array of minimum length, 1
     const valSplit = value.split(";");
 
