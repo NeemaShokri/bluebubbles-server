@@ -13,7 +13,7 @@
         "lint": "eslint --ext=jsx,js,tsx,ts src",
         "dist": "yarn build && electron-builder build --mac --publish never",
         "postinstall": "electron-builder install-app-deps",
-        "jest": "jest"
+        "jest": "test --coverage"
     },
     "husky": {
         "hooks": {
